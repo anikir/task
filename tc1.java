@@ -13,7 +13,8 @@ import org.testng.annotations.Test;
 public class tc1 extends base {
 
 	WebDriver driver;
-	
+	String username="";
+	String pwd="codetheoryio";
 	
 	@BeforeTest
 	public void initalize()
@@ -22,9 +23,8 @@ public class tc1 extends base {
 		driver.get("http://damp-sands-8561.herokuapp.com/");
 	}
 	
-	@Parameters({"username","pwd"})
 	@Test
-	public void login(String username,String pwd)
+	public void login()
 	{
 		//login
 		driver.findElement(By.cssSelector("input[autofocus='autofocus']")).sendKeys(username);
