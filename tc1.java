@@ -75,11 +75,11 @@ public class tc1 extends base {
 		Assert.assertTrue(value.contains("Monthly Report as of"));
 	}
 	
-//	@AfterTest
-//	public void close()
-//	{
-//		driver.close();
-//	}
+	@AfterTest
+	public void close()
+	{
+		driver.close();
+	}
 	
 	@DataProvider(name="testdata")
 	public Object[][] testdata()
